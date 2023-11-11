@@ -109,7 +109,7 @@ const login = async (req, res) => {
     res.status(StatusCodes.OK).json({ user: tokenUser });
     return;
   }
-
+  
   refreshToken = crypto.randomBytes(40).toString('hex');
   const userAgent = req.headers['user-agent'];
   const ip = req.ip;
